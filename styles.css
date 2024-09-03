@@ -1,0 +1,203 @@
+/* Általános stílusok */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Sötét fekete háttér */
+    color: #e0e0e0; /* Világos szürke szöveg */
+    display: flex;
+    flex-direction: column; /* Vertikális elrendezés */
+    align-items: center;
+}
+
+/* Navigációs sáv */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 20px; /* Távolság a böngésző tetejétől */
+    background-color: #2a2a2a; /* Sötét szürke háttér */
+    color: #e0e0e0;
+    width: 70%; /* A középső 70%-ban terjedjen */
+    border-radius: 8px;
+    position: relative;
+    box-sizing: border-box; /* Méretezési problémák elkerülése */
+}
+
+/* Logo és keresőmező elrendezése */
+
+.mini-logo {
+    width: 35px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d6a3e0; /* Világos lila szín a logóhoz */
+}
+
+/* Keresőmező és ikon elrendezése */
+
+.search-container {
+    display: flex;
+    align-items: center; /* Keresőikon és keresőmező vertikális középre igazítása */
+}
+
+#search-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-left: 5px; /* Kis távolság a kereső ikon és a keresőmező között */
+    background-color: #3a3a3a; /* Sötétebb szürke háttér a keresőmezőhöz */
+    color: #e0e0e0; /* Világos szöveg a keresőmezőben */
+}
+
+.search-icon {
+    font-size: 24px;
+    margin-right: 5px; /* Kis távolság a kereső ikon és a keresőmező között */
+    color: #d6a3e0; /* Világos lila szín az ikonhoz */
+}
+
+/* Tartalom középre igazítása és szélességének korlátozása */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-top: 20px; /* Kis távolság a navigációs sávtól */
+}
+
+.content {
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Táblázat tartalom háttér */
+
+.table-container {
+    background: #2a2a2a; /* Sötét szürke háttér */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sötétebb árnyék */
+}
+
+/* Táblázat stílusok */
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Fontos a border-radius és spacing alkalmazásához */
+    border-spacing: 0px; /* A sorok közötti távolság, ha szükséges, állítsd be ezt */
+    border-radius: 30px;
+    text-align: center;
+    color: #e0e0e0; /* Világos szöveg szín */
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #444; /* Sötétebb szegély border-bottom: 1px solid #444 */
+}
+
+th {
+    background-color: #5f22d9; /* Sötét lila háttér a fejlécnek */
+    color: #e0e0e0; /* Világos szöveg a fejlécben */
+}
+
+tr {
+    opacity: 0; /* Kezdetben láthatatlan */
+    animation: fadeInFromTop 0.5s forwards; /* Animáció alkalmazása */
+    background-color: #2a2a2a; /* Sötét háttér a soroknak */
+    border-radius: 8px; /* Lekerekített sarkok a soroknak */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Árnyék a soroknak */
+}
+
+tr:hover {
+    background-color: #4a1b9d; /* Lilás háttér szín a hover állapotban */
+    cursor: pointer; /* Kéz ikon a hover állapotban */
+}
+
+/* Késleltetés minden egyes sorhoz */
+tr:nth-child(1) {
+    animation-delay: 0.05s;
+    margin-bottom: 100px;
+}
+
+tr:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+tr:nth-child(3) {
+    animation-delay: 0.2s;
+}
+tr:nth-child(4) {
+    animation-delay: 0.25s;
+}
+tr:nth-child(5) {
+    animation-delay: 0.3s;
+}
+tr:nth-child(6) {
+    animation-delay: 0.35s;
+}
+tr:nth-child(7) {
+    animation-delay: 0.4s;
+}
+tr:nth-child(8) {
+    animation-delay: 0.45s;
+}
+tr:nth-child(9) {
+    animation-delay: 0.5s;
+}
+tr:nth-child(10) {
+    animation-delay: 0.55s;
+}
+tr:nth-child(11) {
+    animation-delay: 0.6s;
+}
+tr:nth-child(12) {
+    animation-delay: 0.65s;
+}
+tr:nth-child(13) {
+    animation-delay: 0.7s;
+}
+tr:nth-child(14) {
+    animation-delay: 0.75s;
+}
+tr:nth-child(15) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Oldalválasztó gombok */
+
+#pagination-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page-button {
+    background-color: #5f22d9; /* Sötét lila háttér */
+    border: none;
+    color: #e0e0e0; /* Világos szöveg */
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-button:hover {
+    background-color: #4a1b9d; /* Sötétebb lila hover állapotban */
+}
